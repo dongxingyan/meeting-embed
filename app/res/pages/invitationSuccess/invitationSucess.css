@@ -1,0 +1,117 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+a,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p, i{
+    font-style:normal;
+    list-style: none;
+    text-decoration: none;
+}
+input[type=button], input[type=submit], input[type=file], button {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+body{
+    width:10rem;
+    height:100%;
+    background:#f5f7f9;
+    font-family: arial;
+}
+.wrap{
+    width:9.21875rem;
+    margin-top:0.5rem;
+    margin-left:0.390625rem;
+    height:100%;
+}
+.invite-title{
+    width:100%;
+    height:1.875rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom:0.5rem;
+
+}
+
+.logo{
+    width: 1.875rem;
+    height: 1.875rem;
+    background: url("img/logo1.png") no-repeat;
+    background-size: 100%;
+
+}
+
+.title-right{
+    /*width: 100%;*/
+    /*height: 1.875rem;*/
+    padding:0.21875rem 0;
+    margin-left:0.65625rem;
+    font-size: 0.53125rem;
+    font-family: "PingFang SC";
+    color: rgb(32, 38, 47);
+}
+
+.receive{
+    width: 100%;
+    height: 8.0625rem;
+    background: url("img/success.png");
+    background-size:100%;
+    border:1px solid transparent;
+
+}
+.common{
+    width: 8.453125rem;
+    height: 1.203125rem;
+    margin-left:0.390625rem;
+    border: none;
+    border-radius:0.078125rem;
+}
+.receive-success{
+    margin-top:3.59375rem;
+    font-size: 0.546875rem;
+    line-height: 1.4;
+    text-align: center;
+    font-family: "PingFang SC";
+    color: rgb(32, 38, 47);
+}
+.receive-btn{
+    margin-top:0.78125rem;
+    background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+    color:#fff;
+    font-size: 0.546875rem;
+    font-family: "PingFangSC";
+    line-height: 1.2;
+    border-radius: 3rem;
+}
+
+.remark{
+    margin-top:0.3125rem;
+    width: 100%;
+    height: 3.21875rem;
+    font-size: 0.34375rem;
+    font-family: "PingFangSC";
+    color:#77808d;
+    line-height: 1.455;
+}
+.remark i{
+    font-style:normal;
+    color: rgb(252, 71, 74);
+
+}
+.tip{
+    font-size: 0.34375rem;
+    font-family: "PingFangSC";
+    color:#77808d;
+    text-align: center;
+}
+.tip a{
+    color:#93620a;
+}
+

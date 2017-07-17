@@ -1,0 +1,40 @@
+<div class="recharge-index">
+	<nut-page title="充值">
+		<div class="index">
+			<!--<div class="icon"></div>-->
+			<!--<div class="remaining－time">剩余<span ng-class="{'remain-time-high':minutesLeft>100,'remain-time-normal':minutesLeft<100&&minutesLeft>50,'remain-time-low':minutesLeft<50,}">&nbsp;{{minutesLeft}}&nbsp;</span>分钟</div>-->
+			<div class="title">
+				<div class="info">
+					<div>剩余时长</div>
+					<div>
+						<span ng-class="{'remain-time-high':minutesLeft>100,'remain-time-normal':minutesLeft<100&&minutesLeft>50,'remain-time-low':minutesLeft<50,}"
+										ng-bind="minutesLeft"></span>
+							<span>分钟&nbsp;</span>
+					</div>
+				</div>
+				<div class="config-btn btn-with-icon-rem3p5" ui-sref="meetingRoomMeetingTime">
+					<span style='color:#93620a'>使用明细&nbsp;</span>
+					<i class="nuts-icon icon-right"></i>
+				</div>
+			</div>
+			<div class="recharge-items-title">
+				<div class="text">视频会客包</div>
+			</div>
+			<ul class="recharge-ul">
+				<li class="{{package.className}}" ng-click="handleRechargeBtnClick(package)" ng-repeat="package in chargingPackages">
+					<span class="monthly"></span>
+					<p class="recharge-car-name">视频会客包</p>
+					<div class="recharge-car-line"></div>
+					<div class="recharge-car-minute">
+						<p class="recharge-car-minute-num">{{secondToMinute(package.duration)}}</p>
+						<p>分钟</p>
+					</div>
+					<div class="recharge-car-price" style="overflow: hidden;">
+						<span style="float: left;">价格</span>
+						<div style="float: right;"><span>{{package.price/100|currency:'￥'}}</span></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nut-page>
+</div>

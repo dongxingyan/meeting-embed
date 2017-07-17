@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+.vscode
+.idea
+/debug.log
+/npm-debug.log
+/yarn.lock

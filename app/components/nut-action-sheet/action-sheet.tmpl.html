@@ -1,0 +1,11 @@
+<div ng-if="active" ng-click="hide()" class="nuts-action-sheet">
+    <div class="btns">
+        <div ng-repeat="btn in buttons" 
+             ng-class="btn.classConfig"
+             ng-click="btn.callback()"
+             class="btn">{{btn.title}}</div>
+    </div>
+    <div class="btns-cancel">
+        <div ng-click="cancel()" class="btn btn-default">取消</div>
+    </div>
+</div>

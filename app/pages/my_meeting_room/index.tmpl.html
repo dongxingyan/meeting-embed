@@ -1,0 +1,105 @@
+<div class="my-meeting-room-index">
+    <nut-page title="我的会议室" icon="icon-setting" ext-callback="actions.handleSettingBtnClick()">
+        <ul class="my-meeting-room-details">
+            <li ui-sref="rechargeIndex">
+                <div class="fl"><span class="max-wid" ng-bind="meetingRoomName()"></span></div>
+                <div class="fr">
+                    <span style='color:#26cde5'>充值&nbsp;</span>
+                    <i class="skip-right-icon"></i>
+
+                </div>
+            </li>
+            <li>
+                <div class="fl">会议号</div>
+                <div class="fr" ng-bind="meetingRoomNum()">
+                </div>
+            </li>
+            <li ui-sref="meetingRoomMeetingTime">
+                <div>
+                    <div class="fl">剩余时间</div>
+                    <div class="fr">
+                        <span ng-class="{'remain-time-high':remainTime()>100,'remain-time-normal':remainTime()<100&&remainTime()>50,'remain-time-low':remainTime()<50,}"
+                            ng-bind="remainTime()"></span>
+                        <span>分钟&nbsp;</span>
+                        <i class="skip-right-icon"></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="index-btn">
+            <a ng-click="actions.enterMyMeetingRoom()">进入我的会议室</a>
+            <a ng-click="handleCreateInvitation()" ui-sref="invitationCreate">发起会议邀请</a>
+        </div>
+        <div class="my-invitation">
+            <div class="my-invitation-head">
+                <i></i>
+                <span>我的会议日程</span>
+            </div>
+            <div class="my-invitation-record" ng-class="{'bg-white':!invitationRecords.head.record}">
+                <div class="my-invitation-Nrecord" ng-if="!invitationRecords.head.record">
+                    <i></i>
+                    <p>暂无记录</p>
+                </div>
+                <ul class="my-invitation-Yrecord">
+                    <li class="today" ng-if="!!invitationRecords.head.record">
+                        <div class="fl my-invitation-Yrecord-time">
+                            <div ng-if="!invitationRecords.head.alreadyStart()">距会议开始还有</div>
+                            <div ng-if="!invitationRecords.head.alreadyStart()">
+                                <span class="clr-red" ng-if="invitationRecords.head.timeleft.hour()!=0">{{invitationRecords.head.timeleft.hour()}}小时</span>
+                                <span class="clr-red">{{invitationRecords.head.timeleft.second()}}</span>分钟
+                            </div>
+                            <div ng-if="invitationRecords.head.alreadyStart()" ng-click="actions.enterMyMeetingRoom()" style="padding-top:.258rem">会议已经开始</div>
+                        </div>
+                        <div class="fl my-invitation-Yrecord-divide">
+                            <div class="line"></div>
+                            <span class="dot"></span>
+                        </div>
+                        <a ui-sref="invitationEdit({invitationId:invitationRecords.head.record.invitationId})">
+                            <div class="fl my-invitation-record-inst">
+                                <div class="my-invitation-record-inst-item">
+                                    <p class="inst-title">
+                                        {{!!invitationRecords.head.theme?invitationRecords.head.theme:'无主题'}}</p>
+                                    <p class="inst-tips">{{invitationRecords.head.tip}} {{invitationRecords.head.startTime}}
+                                    </p>
+                                </div>
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="after-today" ng-repeat="record in invitationRecords.list">
+                        <div class="fl my-invitation-Yrecord-time">
+                            <div>{{record.date}}</div>
+                            <div>{{record.startTime}}-{{record.endTime}}</div>
+                        </div>
+                        <div class="fl my-invitation-Yrecord-divide">
+                            <div class="line"></div>
+                            <span class="dot"></span>
+                        </div>
+                        <a>
+                            <div ng-click="actions.handleInvitationRecordClick(record.record)" class="fl my-invitation-record-inst">
+                                <div class="my-invitation-record-inst-item">
+                                    <p class="inst-title">{{!!record.theme?record.theme:'无主题'}}</p>
+                                </div>
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="loadmore" ng-if="invitationRecords.hasNext()" infinite-scroll="actions.handleLoadMore()">
+                    正在加载中，请稍候
+                </div>
+            </div>
+        </div>
+    </nut-page>
+    <nut-alert show=" vm.alertRemainTimeLow" modal-id="index-remain-time-low">
+        <div class="cm-alert-failure">
+            <div class="failure-tips" >您没有足够的剩余时长进入会议室。</div>
+            <div class="btn">
+                <div class="cancel-btn fl" ng-click="vm.closeAlert()">取消</div>
+                <div class="success-btn fl" ui-sref="rechargeIndex">去充值</div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </nut-alert>
+</div>

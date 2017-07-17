@@ -1,0 +1,117 @@
+<div class="my-meeting-room-meetingTime">
+    <nut-page title="使用明细">
+        <ul class="my-meeting-room-details">
+            <li>
+                <div class="residual-minute fl">剩余时长&nbsp;<span  ng-class="{'remain-time-high':data.remainTime()>100,'remain-time-normal':data.remainTime()<100&&data.remainTime()>50,'remain-time-low':data.remainTime()<50,}" class="minute-num">{{data.remainTime()}}</span>&nbsp;分钟
+                </div>
+                <div class="fr btn-with-icon-rem2p2">
+                    <a ui-sref="rechargeIndex">
+                        <span style='color:#93620a'>充值</span>&nbsp;&nbsp;
+                        <i class="skip-right-icon"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="use-details">
+            <div class="use-details-head">
+                <i></i>
+                <span>使用明细</span>
+            </div>
+            <ul class="use-details-record">
+                <!--type=1会客使用 对应的使用详情页面是meetingDetails-->
+                <li ng-if="item.type==1 && item.dt!=0" ng-repeat-start="item in data.timeBillList"
+                    class="meeting-use-details-record">
+                    <div class="fl use-details-record-time">
+                        <div>{{item.date}}</div>
+                        <div>{{item.time}}</div>
+                    </div>
+                    <div class="fl use-details-record-divide">
+                        <div class="line"></div>
+                        <span class="icon"></span>
+                    </div>
+                    <a ui-sref="meetingRoomMeetingDetails({id:item.id})">
+                        <div class="fl use-details-record-inst">
+                            <div class="use-details-record-inst-item">
+                                <p class="inst-title">{{item.name}}</p>
+                            </div>
+                            <div class="meeting-use-details-record-minute fr">
+                                <span>-{{item.dt}}</span>&nbsp;分钟&nbsp;&nbsp;
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li >
+                <!--type=2充值时长 对应的使用详情页面是rechargeDetails-->
+                <li ng-if="item.type==2"   class="recharge-use-details-record">
+                    <div class="fl use-details-record-time">
+                        <div>{{item.date}}</div>
+                        <div>{{item.time}}</div>
+                    </div>
+                    <div class="fl use-details-record-divide">
+                        <div class="line"></div>
+                        <span class="icon"></span>
+                    </div>
+                    <a ui-sref="meetingRoomRechargeDetails({id:item.id})">
+                        <div class="fl use-details-record-inst">
+                            <div class="use-details-record-inst-item">
+                                <p class="inst-title">{{item.name}}</p>
+                            </div>
+                            <div class="meeting-use-details-record-minute fr">
+                                <span>+{{item.dt}}</span>&nbsp;分钟&nbsp;&nbsp;
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!--type=3活动赠送 对应的使用详情页面是presentDetails-->
+                <li ng-if="item.type==3"  class="present-use-details-record">
+                    <div class="fl use-details-record-time">
+                        <div>{{item.date}}</div>
+                        <div>{{item.time}}</div>
+                    </div>
+                    <div class="fl use-details-record-divide">
+                        <div class="line"></div>
+                        <span class="icon"></span>
+                    </div>
+                    <a ui-sref="meetingRoomPresentDetails({id:item.id})">
+                        <div class="fl use-details-record-inst">
+                            <div class="use-details-record-inst-item">
+                                <p class="inst-title">{{item.name}}</p>
+                            </div>
+                            <div class="meeting-use-details-record-minute fr">
+                                <span>+{{item.dt}}</span>&nbsp;分钟&nbsp;&nbsp;
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!--type=4失效（包括到期失效和取消赠送） 对应的使用详情页面是invalidDetails-->
+                <li ng-if="item.type==4" ng-repeat-end class="invalid-use-details-record">
+                    <div class="fl use-details-record-time">
+                        <div>{{item.date}}</div>
+                        <div>{{item.time}}</div>
+                    </div>
+                    <div class="fl use-details-record-divide">
+                        <div class="line"></div>
+                        <span class="icon"></span>
+                    </div>
+                    <a ui-sref="meetingRoomInvalidDetails({id:item.id})">
+                        <div class="fl use-details-record-inst">
+                            <div class="use-details-record-inst-item">
+                                <p class="inst-title">{{item.name}}</p>
+                            </div>
+                            <div class="meeting-use-details-record-minute fr">
+                                <span>-{{item.dt}}</span>&nbsp;分钟&nbsp;&nbsp;
+                                <div class="skip-right-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="loadmore" ng-if="data.hasNextpage"
+                 infinite-scroll="getMore()">
+                正在加载中，请稍候
+            </div>
+        </div>
+    </nut-page>
+</div>

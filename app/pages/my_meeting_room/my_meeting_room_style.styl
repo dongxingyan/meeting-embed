@@ -1,0 +1,778 @@
+t(a)
+  a / 64rem
+
+.btn-with-icon-rem2p2{
+  width: 2.2rem
+}
+
+.btn-save.settings{
+  margin: t(20);
+  border-radius: t(5)
+  background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+  padding: t(20)
+  color: white
+  text-align: center
+  font-size: t(30)
+  margin-top: t(200)
+  border-radius:t(50)
+}
+
+/*页面白背景*/
+.active {
+  background: white;
+}
+
+/*页面灰背景*/
+.inactive {
+  background: #f5f7f9
+}
+
+/*头部背景*/
+.nuts-page-header {
+  background: white;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*展示信息*/
+.my-meeting-room-details {
+  margin-top: t(18);
+  li {
+    height t(102)
+    line-height: t(102)
+    background: white;
+    border-bottom: 1px solid #e6ebee
+    margin-top: t(8);
+    padding: 0 t(30);
+    font-size: t(30)
+    color: #435062
+    .fr{
+      color:#93620a
+    }
+  }
+
+}
+
+.cm-alert-failure {
+  width: t(484)
+  background: white
+  border: 1px solid #e2d2a8;
+  border-radius: 4px
+  .failure-tips {
+    height: t(120);
+    line-height: t(120)
+    font-size: t(25);
+    color: #435062
+    text-align: center;
+    border-bottom: 1px solid #ecf0f2
+  }
+  .btn {
+    position: relative;
+    height: t(100)
+    line-height: t(100)
+    text-align: center
+    font-size: t(29);
+    .cancel-btn {
+      width: t(242)
+    }
+    .success-btn {
+      width: t(242)
+      color: #93620a
+    }
+    .line {
+      position: absolute;
+      left: t(242)
+      width: 0
+      height: t(100)
+      border-left: 1px solid #ecf0f2
+
+    }
+  }
+}
+
+//  激活成功的弹框
+.cm-alert-success {
+  width t(490)
+  height t(580)
+  padding-top t(74)
+  padding-bottom t(20)
+  .success-icon {
+    margin-left t(201)
+    width t(80)
+    height t(80)
+    background-image url("../../res/imgs/recharge-success-icon.png")
+    background-size 100% 100%
+  }
+  .success-title {
+    margin-top t(30)
+    text-align center
+    font-size t(30)
+  }
+  .success-line-1 {
+    margin-top t(30)
+    text-align center
+    font-size t(25)
+  }
+  .success-line-2 {
+    margin-top t(20)
+    text-align center
+    font-size t(25)
+  }
+  .success-line-3 {
+    margin-top t(20)
+    text-align center
+    font-size t(25)
+  }
+  .success-btn {
+    width t(344)
+    height t(80)
+    margin-top t(35)
+    margin-left t(69)
+    line-height t(80)
+    text-align center
+    font-size t(34)
+    color #fff
+    background-color #23D1E3
+  }
+  .success-help {
+    margin-top t(30)
+    text-align center
+    font-size t(25)
+    a {
+      color #23D1E3
+    }
+  }
+}
+
+/*公共右侧箭头*/
+
+
+
+.skip-right-icon {
+  float: right
+  width: t(15)
+  height: t(102)
+  background: url('../../res/imgs/skip-right-icon.png') center no-repeat
+  background-size  t(16) t(30)
+  margin: 0
+  vertical-align: middle
+}
+
+
+.nuts-icon.icon-right {
+  float: right
+  background: url('../../res/imgs/skip-right-icon.png') center no-repeat
+  background-size  t(15) t(27)
+  margin: 0
+  vertical-align: middle
+}
+
+/*修改会议室信息*/
+.meetingroom-setup-item {
+  p {
+    font-size: t(18)
+    color: #fc474a
+    text-align: center;
+    margin-top: t(24)
+  }
+  .meetingroom-setup-item-box {
+    height: t(63.5)
+    background: white
+    margin-top: t(24)
+    padding: 0 t(35);
+    border-bottom: 1px solid #e3e8ec
+    padding-top t(32.5)
+    input {
+      float: left;
+      width: t(524);
+      height: t(31);
+      line-height: t(31)
+      border: none;
+      font-size: t(25)
+      color: #93620a;
+    }
+    .cross {
+      float: right
+      width: t(26)
+      height: t(26)
+      background: url('../../res/imgs/cross.png') no-repeat;
+      background-size t(26) t(26)
+    }
+  }
+}
+
+/*开通会议室*/
+.my-meeting-room-create {
+  .nuts-page {
+    background: white;
+  }
+  .swiper-inst {
+    text-align: center
+    color: #20262f
+    font-size: t(29);
+    line-height: t(142)
+    margin-bottom: t(18)
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width t(18)
+      height t(18)
+      background #c29f64
+      margin: 0 t(12);
+    }
+  }
+  .create-btn {
+    margin-top: t(60);
+    a {
+      display: block;
+      width: t(580);
+      height: t(77);
+      font-size:t(30)
+      line-height: t(77)
+      text-align: center;
+      color: white;
+      background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+      background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+      margin: 0 auto;
+      border-radius: t(39)
+    }
+  }
+  .create-footer {
+    width: 100%
+    height: t(25)
+    line-height: t(25)
+    position: absolute;
+    bottom: t(67)
+    text-align: center;
+    font-size: t(19)
+    color: #77808d;
+    vertical-align: middle;
+    img {
+      height: t(50);
+      vertical-align: middle;
+      margin: t(-4) t(8) 0
+    }
+  }
+}
+
+.loadmore {
+  text-align center;
+}
+
+// 激活会议室成功
+.my-meeting-room-createSuccess{
+  background:#F5F7F9;
+.success-head{
+  height:t(142)
+  line-height:t(142)
+  font-size: t(34);
+  font-family: "PingFang SC";
+  text-align center
+  color: rgb(32, 38, 47);
+  i{
+    color:#fc474a;
+    font-style normal
+  }
+
+}
+  .success-detail{
+    margin-left:t(26)
+    width:t(590)
+    height:t(550)
+    text-align center
+    background:url("../../res/imgs/successIcon.png") no-repeat;
+    background-size:t(590) t(550);
+    font-size:t(35)
+    font-family "PingFang SC"
+    color: rgb(32, 38, 47)
+    overflow hidden;
+  .success-title{
+    margin-top:t(200)
+  }
+    .success-number{
+      margin-top:t(30)
+      .number{
+        font-size t(62)
+        font-style normal
+      }
+    }
+    .success-btn{
+      margin-top:t(35)
+      margin-left:t(25)
+      width:t(540)
+      height:t(76)
+      line-height t(76)
+      border-radius: t(38);
+      background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+      background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+      text-align center
+      font-size: t(35);
+      font-family: "PingFangSC";
+      color: rgb(255, 255, 255);
+    }
+  }
+  .success-help{
+    margin-top t(40)
+    text-align center
+    font-size t(25)
+    a {
+      color #93620a
+    }
+
+  }
+}
+
+/*我的会议室*/
+.my-meeting-room-index {
+  background: #f5f7f9;
+  .title{
+    background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+    height: t(140)    
+    .info{
+      color: white;
+    }
+    .config-btn{
+      i{
+        background-size: t(40) t(40)
+      }
+    }
+  }
+  .remain-time{
+    background-color: white
+    height:t(140)
+    margin-top: t(20)
+    .config-btn{
+      i{
+        background-size: t(15) t(27)
+      }
+    }
+  }
+  .title,.remain-time{
+    .info{
+      float: left;
+      padding-left:t(30)
+      font-size: t(30)
+      padding-top:t(30)
+      div{
+        padding-bottom: 10px;
+      }
+    }
+    .config-btn{
+      float: right;
+      padding-right: t(30)
+      font-size:t(35)
+      line-height: t(140)
+      i{
+        width: t(40)
+        padding-top: t(75)
+      }
+    }
+  }
+  .details-minute {
+    font-size: t(29)
+    color: #fc474a;
+  }
+
+  .float-fixer{
+    width: 100%
+    overflow-y: scroll;
+    position: absolute;
+    top:t(410)
+    bottom:t(0)
+    padding-bottom: t(110)
+  }
+
+  .index-btn {
+    position: fixed;
+    // top: t(0)
+    z-index: 10
+    bottom: 0
+    height: t(100)
+    overflow: hidden;
+    clear both;
+    a {
+      float: left;
+      font-size t(30)
+      width: t(320);
+      height: t(100)
+      color: white;
+      line-height: t(100)
+      text-align: center;
+    }
+    a:nth-child(1) {
+      background-color #ddca9e
+    }
+    //a:nth-child(1):active {
+    //  background: #1badbc;
+    //  color: white;
+    //}
+    a:nth-child(2) {
+      background: #c6a66d;
+    }
+    //a:nth-child(2):active {
+    //  background: #1baea6;
+    //}
+  }
+  .my-invitation{
+    padding-top: t(40)
+    padding-bottom: t(100)
+  }
+  .my-invitation-head {
+    height: t(68)
+    line-height: t(68)
+    background: #fff;
+    padding: 0 t(30);
+    border-bottom: 1px solid #e6ebee
+    i {
+      display: inline-block;
+      position absolute
+      margin-top t(17)
+      width: t(5)
+      height: t(35)
+      border-radius: t(3)
+      background: -webkit-linear-gradient(#e2d2a8, #c29f64); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+      background: linear-gradient(#e2d2a8, #c29f64); /* 标准的语法 */
+      vertical-align: middle;
+      margin-right: t(24)
+    }
+    span{
+      padding-left t(25)
+      font-size t(30)
+    }
+  }
+  .bg-white{
+    background #fff
+  }
+  .my-invitation-Nrecord {
+    width: 100%
+    min-height: 100%
+    background: white;
+    text-align: center;
+    // margin-top: t(14)
+    i {
+      display: block;
+      width: t(153)
+      height: t(153)
+      background: url('../../res/imgs/anonymous-icon1') bottom no-repeat;
+      background-size: 100%
+      background-color: white;
+      padding-top: t(74)
+      margin: 0 auto t(20);
+    }
+    p{
+      font-size t(25)
+      color #77808d
+    }
+  }
+  .my-invitation-Yrecord {
+    margin-top: t(14)
+    overflow: hidden;
+    li {
+      height: t(112)
+    }
+  }
+  .my-invitation-Yrecord-time {
+    font-size: t(19)
+    color: #435062
+    width: t(163);
+    text-align: right;
+    line-height: t(35)
+    margin-top: t(22)
+  }
+  .my-invitation-Yrecord-divide {
+    position: relative;
+    .line {
+      width: t(3)
+      height: t(112)
+      background: #e2d2a8
+      margin: 0 t(24);
+    }
+    .dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: t(-8.5)
+      margin-left: t(-8.5)
+      display: block;
+      width: t(17)
+      height: t(17)
+      border-radius: 50%
+      background: #c29f64;
+    }
+  }
+  .clr-red {
+    color: #fc474a;
+  }
+  .my-invitation-record{
+    padding-bottom: t(100)
+  }
+  .my-invitation-record-inst {
+    width: t(362)
+    height: t(102)
+    background: white
+    padding: 0 t(32)
+    border-bottom: 1px solid #e8e8e8
+  }
+  .my-invitation-record-inst-item {
+    float: left;
+    width: t(347)
+  }
+  .today {
+    .inst-title {
+      font-size: t(25)
+      color: #20262f
+      margin: t(28) 0 t(5);
+    }
+  }
+  .after-today {
+    .inst-title {
+      font-size: t(25)
+      color: #20262f
+      line-height: t(102);
+    }
+  }
+  .inst-tips {
+    font-size: t(19)
+    color: #435062
+  }
+}
+
+/*会议明细,充值明细*/
+.my-meeting-room-meetingDetails, .my-meeting-room-rechargeDetails,.my-meeting-room-presentDetails,.my-meeting-room-invalidDetails {
+  .meetingRoom-Details {
+    background white
+    li {
+      height: t(102)
+      line-height: t(102)
+      border-bottom: 1px solid #e4e9ed
+      margin-left: t(35);
+      padding-right: t(35);
+      font-size: t(25)
+      color: #435062
+    }
+    li:last-child {
+      border: none;
+    }
+  }
+  .meetingRoom-Details-item {
+    border-top: t(18) solid #f5f7f9;
+    border-bottom: 1px solid #e4e9ed
+  }
+}
+
+/*设置会议室信息*/
+.meetingroom-setup-details {
+  margin-top: t(26)
+  li {
+    margin-top: t(18)
+  }
+  li:last-child {
+    height: t(87)
+    line-height: t(87)
+  }
+
+  .max-wid {
+    float: left
+    width: t(360)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    text-align: right
+    color:#93620a
+  }
+}
+.max-wid {
+    float: left
+    width: t(360)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    text-align: left
+  }
+/*会议时长*/
+
+.my-meeting-room-meetingTime {
+    font-size: t(30)
+  
+  .residual-minute {
+    font-size: t(30)
+    color: #77808d;
+  }
+  .minute-num {
+    font-size: t(29)
+  }
+  .use-details-head {
+    height: t(68)
+    line-height: t(68)
+    background: #fff;
+    padding: 0 t(30);
+    border-bottom: 1px solid #e6ebee
+    margin-top: t(18);
+    i {
+      display: inline-block;
+      width: t(5)
+      position absolute
+      margin-top t(18)
+      height: t(35)
+      border-radius: t(3)
+      background: -webkit-linear-gradient(#e2d2a8, #c29f64); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+      background: linear-gradient(#e2d2a8, #c29f64); /* 标准的语法 */
+      vertical-align: middle;
+      margin-right: t(24)
+    }
+    span {
+      padding-left t(25)
+    }
+  }
+  .use-details-record {
+    margin-top: t(14)
+    overflow: hidden;
+    li {
+      height: t(112)
+    }
+  }
+  .use-details-record-time {
+    font-size: t(23)
+    color: #435062
+    width: t(163);
+    text-align: right;
+    line-height: t(35)
+    margin-top: t(22)
+  }
+  .use-details-record-divide {
+    position: relative;
+    .line {
+      width: t(3)
+      height: t(112)
+      background: #c29f64
+      margin: 0 t(24);
+    }
+  }
+  //使用明细
+  .meeting-use-details-record {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: t(-22)
+      margin-left: t(-19)
+      display: block;
+      width: t(44)
+      height: t(44)
+      background: url('../../res/imgs/meeting-time-icon1.png') no-repeat;
+      background-size t(44) t(44)
+    }
+  }
+  .recharge-use-details-record {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: t(-22)
+      margin-left: t(-19)
+      display: block;
+      width: t(44)
+      height: t(44)
+      background: url('../../res/imgs/recharge-icon1.png') no-repeat;
+      background-size t(44) t(44)
+    }
+  }
+  .present-use-details-record {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: t(-22)
+      margin-left: t(-19)
+      display: block;
+      width: t(44)
+      height: t(44)
+      background: url('../../res/imgs/present-icon1.png') no-repeat;
+      background-size t(44) t(44)
+    }
+  }
+  .invalid-use-details-record {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: t(-22)
+      margin-left: t(-19)
+      display: block;
+      width: t(44)
+      height: t(44)
+      background: url('../../res/imgs/invalid-icon1.png') no-repeat;
+      background-size t(44) t(44)
+    }
+  }
+  .use-details-record-inst {
+    width: t(362)
+    height: t(102)
+    background: white
+    padding: 0 t(32)
+    border-bottom: 1px solid #e8e8e8
+  }
+  .use-details-record-inst-item {
+    float: left;
+    width: t(192)
+    height: t(102)
+    .inst-title {
+      width: 100%
+      font-size: t(23)
+      line-height: t(102)
+      vertical-align: middle;
+    }
+  }
+  .meeting-use-details-record-minute {
+    font-size: t(25)
+    line-height: t(102)
+  }
+
+}
+
+/*帮助页*/
+.meetingroom-setup-help {
+  .meetingroom-setup-help-item {
+    height: 100%;
+    background: white;
+    padding: t(31);
+    border-bottom: 1px solid #e6ebee
+    h1 {
+      font-size: t(29)
+      color: #20262f
+      margin-bottom: t(30)
+    }
+    p {
+      font-size: t(23)
+      color: #435062;
+      line-height: t(42)
+    }
+  }
+  li:first-child {
+    margin-top: t(18)
+  }
+  li:last-child {
+    margin-top: t(40)
+  }
+}
+

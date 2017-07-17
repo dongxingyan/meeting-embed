@@ -1,0 +1,70 @@
+<!--会议信息页面-->
+<div class="invitation-edit invite">
+	<nut-page title="发起房间邀请" icon="icon-more" ext-callback='log()'>
+		<p class="title">
+			会客信息
+		</p>
+		<ul class="invitation-details">
+			<li class="invitation-details-subject">
+				<div class="fl">主题： </div>
+				<div class="invitation-theme">
+					<span>{{invitation.theme}}</span>&nbsp;&nbsp;
+					<!--<i class="skip-right-icon"></i>-->
+				</div>
+			</li>
+			<!--<li class="invitation-details-subject">
+				<div class="fl">会议室号： </div>
+				<div class="">
+					<span>{{vmrId}}</span>&nbsp;&nbsp;
+				</div>
+			</li>
+			<li class="invitation-details-subject">
+				<div class="fl">入会密码： </div>
+				<div class="">
+					<span>{{vmrGuestPass}}</span>&nbsp;&nbsp;
+				</div>
+			</li>-->
+			<li>
+				<div class="fl">开始时间： </div>
+				<!--<div class="fr">{{invitation.startTime| date:'yyyy-mm-dd HH:mm'}}</div>-->
+				<div class="datetime-input-group">
+					<div class="invitation-time">
+						{{invitation.startTime|date:'yyyy-MM-dd hh:mm'}}
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="fl">持续时间： </div>
+				<div class="datetime-input-group">
+					<div>
+						{{getDuration()}}
+					</div>
+				</div>
+			</li>
+		</ul>
+
+
+		<div class="guest-list" ng-show="guestList.length>0">
+			<header>参会人员</header>
+			<ul>
+				<li ng-repeat="item in guestList">
+					<img ng-src="{{item.avatar}}" alt="{{item.nickname}}">
+					<span ng-bind="item.nickname"></span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="invitation-type">
+			<p class="invitation-type-title">请选择邀请方式</p>
+			<ul class="invitation-type-item">
+				<li class="fl" ng-click="handleShareBtnCLick(invitationType.type)" ng-repeat='invitationType in invitationTypes'>
+					<img ng-src="{{invitationType.url}}" alt="" class="invitation-type-item-Img">
+					<p>{{invitationType.name}}</p>
+				</li>
+			</ul>
+		</div>
+		<!--<div class="invitation-cancel" ng-click="cancelInvitation()">
+			取消会议
+		</div>-->
+	</nut-page>
+</div>

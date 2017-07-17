@@ -1,0 +1,301 @@
+t(a)
+  a / 64rem
+
+body
+  width: t(640)
+  background: #f5f7f9
+  height: 100%;
+
+.btn-with-icon-rem3p5 {
+  width: 3.5rem
+}
+
+.recharge-index {
+
+  .title {
+    margin-top: t(15)
+    background-color: white
+    height: t(140)
+    .info {
+      float: left;
+      padding-left: t(30)
+      font-size: t(30)
+      padding-top: t(30)
+      color: black
+      div {
+        padding-bottom: 10px;
+      }
+    }
+    .config-btn {
+      float: right;
+      padding-right: t(30)
+      font-size: t(35)
+      line-height: t(140)
+      i {
+        width: t(40)
+        padding-top: t(75)
+        background-size: t(15) t(27)
+      }
+    }
+  }
+
+  .icon {
+    width: t(79)
+    height: t(78)
+    background: url('../../res/imgs/icon.png')
+    background-size: 100%
+    margin: t(64) auto t(26)
+  }
+  .remaining－time {
+    text-align: center
+    font-size: t(25.6)
+    color: #435062
+  }
+  .recharge-items-title {
+    margin-top: t(55)
+    padding: t(15) 0 t(15) t(35)
+    background-color #fff
+    .text {
+      border-left: t(5) solid #c29f64
+      font-size: t(30)
+      padding-left: t(15)
+    }
+  }
+  .recharge-ul {
+    padding: t(15) 0 0 t(35)
+    li {
+      position: relative;
+      float: left
+      width: t(273)
+      height: t(273)
+      background-color: white
+      list-style: none;
+      border-radius: t(3)
+      margin: 0 t(25) t(27) 0
+    }
+    span.monthly {
+      background: url("../../res/imgs/monthlyPic.png") right top no-repeat
+      display block
+      position: absolute
+      width: t(60)
+      height: t(60)
+      top: t(-3)
+      right: t(-1)
+      background-size 100%
+    }
+  }
+  .car-bgI0 {
+    background: url('../../res/imgs/sixty.png') top left no-repeat
+    background-size: 100%
+  }
+  .car-bgI1 {
+    background: url('../../res/imgs/two-hundred.png') top left no-repeat
+    background-size: 100%
+  }
+  .car-bgI2 {
+    background: url('../../res/imgs/five-hundred.png') top left no-repeat
+    background-size: 100%
+  }
+  .car-bgI3 {
+    background: url('../../res/imgs/a-thousand.png') top left no-repeat
+    background-size: 100%
+  }
+  .recharge-car-name {
+    font-size: t(25)
+    color: white
+    text-align: center
+    padding: t(20) 0 t(5)
+  }
+
+  .recharge-car-line {
+    width: t(220)
+    height: t(2)
+    background: white
+    margin: 0 auto;
+  }
+
+  .recharge-car-minute {
+    font-size: t(20)
+    text-align: center
+    color: white
+    .recharge-car-minute-num {
+      font-size: t(60)
+      height: t(60)
+      margin: t(15) 0 t(11) 0
+    }
+  }
+
+  .recharge-car-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: t(225);
+    height: t(73)
+    line-height: t(73)
+    font-size: t(25)
+    margin: 0 t(24)
+  }
+
+}
+
+.deal {
+  .deal-msg {
+    text-align: center;
+  }
+  .success-msg-icon {
+    width: t(79)
+    height: t(79)
+    background: url('../../res/imgs/recharge-success-icon.png') no-repeat
+    background-size: 100%
+    margin: t(56) auto t(18);
+  }
+  .failure-msg-icon {
+    width: t(79)
+    height: t(78)
+    background: url('../../res/imgs/recharge-failure-icon.png') no-repeat
+    background-size: 100%
+    margin: t(56) auto t(19);
+  }
+  .deal-msg-tips {
+    font-size: t(25)
+    color: #435062;
+  }
+  .deal-msg-inst {
+    font-size: t(18)
+    color: #77808d;
+    margin: t(20) 0 t(54);
+  }
+  .deal-details {
+    font-size: t(25)
+    background: white;
+    padding-left: t(32);
+    li {
+      height: t(83)
+      line-height: t(83)
+      border-bottom: 1px solid #f3f5f7
+      padding-right: t(32);
+    }
+    .fl {
+      float: left;
+      color: #20262f;
+    }
+    .fr {
+      float: right;
+      color: #435062
+    }
+  }
+  .confirm-deal-details {
+    margin-top: t(17);
+  }
+  .deal-btn {
+    width: t(578)
+    position: absolute;
+    bottom: t(42);
+    margin: 0 t(31);
+    a {
+      color: white;
+      line-height: t(77)
+      text-align: center;
+      border-radius: t(4)
+    }
+  }
+  .success-deal-btn {
+    a:nth-child(1) {
+      width: t(271)
+      height: t(77)
+      float: left;
+      background: #1eccc4;
+    }
+    a:nth-child(2) {
+      width: t(271)
+      height: t(77)
+      background: rgb(35, 209, 227);
+      float: right;
+    }
+  }
+  .failure-deal-btn {
+    a:nth-child(1) {
+      width: t(222);
+      height: t(77)
+      float: left;
+      background: #1eccc4;
+    }
+    a:nth-child(2) {
+      width: t(333);
+      height: t(77)
+      float: right;
+      background: #23d1e3;
+    }
+  }
+  .confirm-deal-btn {
+    a {
+      width: t(580);
+      height: t(77)
+      float: left;
+      background: #23d1e3;
+    }
+  }
+  .deal-payment-change {
+    padding-left: t(31)
+    line-height: t(74)
+    color: #77808d;
+  }
+  .deal-payment-type {
+    background: white;
+    padding-left: t(35);
+    border-bottom: 1px solid #e6ebee;
+    li {
+      height: t(135)
+      padding-right: t(35);
+    }
+    li:nth-child(1) {
+      border-bottom: 1px solid #f1f3f5;
+    }
+    li:nth-child(2) {
+      border-bottom: 1px solid #f2f5f7;
+    }
+  }
+  .deal-payment-type-icon {
+    float: left;
+    width: t(66)
+    height: t(66)
+    background-size: 100%
+    margin: t(34) t(30) 0 t(4);
+  }
+  .ZFB-icon {
+    background: url('../../res/imgs/recharge-ZFB-icon.png') center no-repeat;
+  }
+  .WX-icon {
+    background: url('../../res/imgs/recharge-WX-icon.png') center no-repeat;
+  }
+  .deal-payment-type-inst {
+    float: left;
+    margin-top: t(40);
+    p:nth-child(1) {
+      font-size: t(25)
+      color: #484848
+    }
+    p:nth-child(2) {
+      font-size: t(20)
+      color: #77808d
+      line-height: t(35);
+    }
+  }
+  .deal-payment-type-Ycurrent {
+    float: right
+    width: t(46)
+    height: t(46)
+    background: url('../../res/imgs/recharge-current-icon.png') no-repeat
+    margin-top: t(45);
+  }
+  .deal-payment-type-Ncurrent {
+    float: right
+    width: t(46)
+    height: t(46)
+    background: url('../../res/imgs/reharge-Ncurrent-icon.png') no-repeat
+    margin-top: t(45);
+  }
+}
+
+
+	

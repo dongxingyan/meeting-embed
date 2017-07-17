@@ -1,0 +1,14 @@
+
+<div class="setup-theme">
+    <nut-page title="会客主题" icon="icon-save" ext-callback="save()">
+    	<div class="meetingroom-setup-item">
+	    	<div class="meetingroom-setup-item-box">
+	    		<input type="text" placeholder="请输入会客主题" ng-model="data.theme">
+    			<i class="cross" ng-click="data.theme=''" onclick="document.querySelector('input').focus()"></i>
+	    	</div>
+    	</div>      
+		<div ng-click="save()" class="save-btn">
+			保存
+		</div>
+    </nut-page>
+</div>

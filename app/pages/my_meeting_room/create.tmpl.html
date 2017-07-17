@@ -1,0 +1,45 @@
+<div class="my-meeting-room-create">
+    <nut-page title="我的房间" hide-title="true">
+        <!--<nut-page></nut-page>-->
+        <ks-swiper-container initial-slide="0" show-nav-buttons="false" slides-per-view="1" autoplay="3000" loop="false" override-parameters="{'pagination':'.swiper-pagination','paginationType':'bullets','paginationHide':false}">
+            <ks-swiper-slide class="swiper-slide" ng-repeat="swiper in swipers">
+                <img style="width:100%" ng-src="{{swiper.url}}" alt="">
+                <div class="swiper-inst">{{swiper.inst}}</div>
+            </ks-swiper-slide>
+            <!--分页器-->
+            <div class="swiper-pagination"></div>
+            <!--分页器 end-->
+        </ks-swiper-container>
+        <div class="create-btn">
+            <a ng-click="create()" ng-if="!waiting">我要激活</a>
+            <a ng-if="waiting">正在激活...</a>
+        </div>
+        <div class="create-footer">
+            <span>我的房间功能由</span>
+            <img ng-src="{{bottom.bottomlogoImg}}" alt="">
+            <span>提供</span>
+        </div>
+    </nut-page>
+    <nut-alert show="showSuccessAlert" modal-id="create-meetingroom-success">
+        <div class="cm-alert-success">
+            <div class="success-icon"></div>
+            <div class="success-title">激活成功!<br>您的房间将在3分钟内完成激活。</div>
+            <div class="success-line-1">您的号为</div>
+            <div class="success-line-2">{{data.num}}</div>
+            <div class="success-line-3">恭喜您免费获得 {{data.remainTime}} 分钟时长，<br>有效期一个月。</div>
+            <div class="success-btn" ng-click="handleOKButtonClicked()">确定</div>
+            <div class="success-help"><a ng-click="gotoHelpPage()" ui-sref="meetingRoomSetupHelp">使用帮助</a></div>
+        </div>
+    </nut-alert>
+    <nut-alert show="showFailureAlert" modal-id="create-meetingroom-failure">
+        <div class="cm-alert-failure">
+            <div class="failure-tips">激活房间需绑定手机号</div>
+            <div class="btn">
+                <div class="cancel-btn fl" ng-click="handleBindCancelButtonClicked()">取消</div>
+                <div class="success-btn fl" ng-click="handleBindButtonClicked()">去绑定</div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </nut-alert>
+</div>

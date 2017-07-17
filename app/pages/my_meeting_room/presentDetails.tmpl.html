@@ -1,0 +1,30 @@
+<div class="my-meeting-room-presentDetails">
+	<nut-page title="使用明细">
+		<div class="meetingRoom-Details">
+			<ul class="meetingRoom-Details-item">
+				<li>
+					<div class="fl">房间号：</div>
+					<div class="fl">{{data.meetingRoomNum}}</div>
+				</li>
+				<li>
+					<div class="fl">充值时长：</div>
+					<div class="fl"><span>{{data.duration}}</span>分钟</div>
+				</li>
+				<li>
+					<div class="fl">有效期至：</div>
+					<div class="fl">{{data.valid}}</span></div>
+				</li>
+				<li>
+					<div class="fl">支付金额：</div>
+					<div class="fl">￥<span>{{data.money/100}}(活动赠送)</span></div>
+				</li>
+				<li>
+					<div class="fl">订购时间：</div>
+					<div class="fl">{{data.time}}</div>
+				</li>
+			</ul>
+
+		</div>
+
+	</nut-page>
+</div>

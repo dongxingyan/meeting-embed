@@ -1,0 +1,40 @@
+<div class="meetingroom-setup-index">
+    <nut-page title="我的房间设置">
+        <ul class="my-meeting-room-details meetingroom-setup-details">
+			<li ui-sref="meetingRoomSetupName">
+				<div class="fl">房间名称</div>
+				<div class="fr">
+					<span class="max-wid">{{meetingRoom.name}}</span>
+					&nbsp;&nbsp;<i class="skip-right-icon"></i>	
+				</div>	
+			</li>
+			<li ui-sref="meetingRoomSetupMeetingname">
+				<div class="fl">昵称</div>
+				<div class="fr">
+					<span class="max-wid">{{meetingRoom.nickName}}</span>
+					&nbsp;&nbsp;<i class="skip-right-icon"></i>	
+				</div>	
+			</li>
+			<li ui-sref="meetingRoomSetupHostpass">
+				<div class="fl">房主密码</div>
+				<div class="fr">
+					<span>{{meetingRoom.hostPassword}}</span>
+					&nbsp;&nbsp;<i class="skip-right-icon"></i>	
+				</div>	
+			</li>
+			<li ui-sref="meetingRoomSetupGuestpass">
+				<div class="fl">访客密码</div>
+				<div class="fr">
+					<span>{{meetingRoom.guestPassword}}</span>
+					&nbsp;&nbsp;<i class="skip-right-icon"></i>	
+				</div>	
+			</li>
+			<li ui-sref="meetingRoomSetupHelp">
+				<div class="fl">使用帮助</div>
+				<div class="fr">
+					&nbsp;&nbsp;<i class="skip-right-icon"></i>	
+				</div>	
+			</li>
+        </ul>	
+    </nut-page>
+</div>

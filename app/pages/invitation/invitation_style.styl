@@ -1,0 +1,237 @@
+t(a)
+    a/64rem
+
+body
+    width:t(640)
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+.time.select{
+	font-size: t(26);
+}
+
+.setup-theme{
+	.save-btn{
+		margin: t(20);
+		border-radius: t(40)
+		background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+		background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+		padding: t(20)
+		color: white
+		text-align: center
+		font-size: t(30)
+		margin-top: t(200)
+	}
+}
+
+.invitation-index,.invitation-edit{
+	.shade{
+		width: 100%
+		height: 100%
+		position: absolute;
+		z-index: 100
+	}
+	&.invite{
+		p.title{
+			font-size: t(25)
+			padding-top: t(15)
+			padding-left: t(20)
+			text-align: left;
+		}
+	}
+
+	.invitation-cancel{
+		background-color: #fc474a
+		color white
+		font-size t(30)
+		padding t(30)
+		margin: t(10) t(25)
+		margin-top: t(45)
+		border-radius t(50)
+		text-align: center
+	}
+	.invitation-create{
+		background: -webkit-linear-gradient(left, #e2d2a8 , #c29f64); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(right, #e2d2a8, #c29f64); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(right, #e2d2a8, #c29f64); /* Firefox 3.6 - 15 */
+		background: linear-gradient(to right, #e2d2a8 , #c29f64); /* 标准的语法 */
+		color white
+		font-size t(30)
+		padding t(30)
+		margin: t(10) t(25)
+		margin-top: t(400)
+		border-radius t(60)
+		text-align: center
+	}
+	.datetime-input-above{			
+		z-index 10
+		height t(102)
+		opacity 0
+	}
+	.datetime-input-below{			
+		z-index 0
+		// opacity 0
+	}
+
+	.date-input{
+		width t(160)
+		height t(102)
+		display inline-block
+		position relative
+		text-align center
+		input,div{
+			position:absolute
+			left 0
+			top 0
+		}
+		.datetime-input-above{			
+			line-height t(102)
+			height t(102)
+			width t(160)
+			
+		}
+		.datetime-input-below{			
+			line-height t(102)
+			width t(160)
+			// opacity 0
+		}
+	}
+	.time-input{
+		// opacity 0
+		margin-left t(20)
+		width t(80)
+		height t(102)
+		display inline-block
+		position relative
+		input,div{
+			position:absolute
+			left 0
+			top 0
+		}
+
+		.datetime-input-above{			
+			line-height t(102)
+			height t(102)
+			width t(80)
+			
+		}
+		.datetime-input-below{			
+			line-height t(102)
+			width t(80)
+		}
+	}
+
+	
+	.nuts-page-header{
+		background: white;
+	}
+	.invitation-details{
+		font-size: t(25)
+		margin-top: t(25)
+		li{
+			overflow: hidden
+			height: t(102)
+			line-height: t(102)
+			background: white
+			border-bottom: 1px solid #e8edf0
+			// margin-top:t(17)
+			padding: 0 t(35)
+			.fr{
+				color:#93620a
+			}
+			.invitation-theme, .invitation-time, .datetime-input-group{
+				color:#93620a
+				text-align right
+			}
+
+		}
+	}
+	.invitation-type{
+		margin-left: t(17)
+	}
+	.invitation-type-title{
+		font-size: t(24)
+		height: t(24)
+		color: #435062
+		margin:t(68) 0 t(35)
+	}
+	.invitation-type-item{
+		overflow: hidden
+		li{
+			width: t(188)
+			height: t(188)
+			background: white
+			margin-right:t(21)
+			text-align: center
+			font-size t(20)
+			color #666
+		}
+		li:last-child{
+			margin-right: 0
+		}
+	}
+	.invitation-type-item-Img{
+		height: t(70)
+		margin t(43) 0 t(17) 0
+	}
+}
+
+	.invitation-edit{
+		.invitation-type-title.edit-page-fix{
+			margin-top t(25)
+		}
+		.guest-list{
+			width 100%
+			header{
+				font-size t(24)
+				margin-top: t(20)
+				margin-left t(20)
+			}
+			ul{
+				//width t(1624)
+				overflow-x scroll
+				display flex				
+				display: box;                  
+				display: -webkit-box;        
+				display: -moz-box;           
+				display: -ms-flexbox;        
+				display: -webkit-flex;       
+				padding t(0) t(10)
+				margin-top t(20)
+				background-color white
+				// &::-webkit-scrollbar{
+				// 	// height:0;
+				// 	opacity: 0.5
+				// }
+				li{
+					display inline-block
+					padding t(20) t(20)
+					flex 0 0 t(80)
+					background-color: #fff
+					img{
+						display block
+						width t(80)
+						height t(80)
+						border-radius t(80)
+						overflow hidden
+						background-color rgb(199,199,199)
+					}
+					span{
+						display block
+						margin-top t(10)
+						width t(80)
+						text-overflow:ellipsis
+						overflow hidden
+						white-space nowrap
+					}
+				}
+			}
+		}
+	}

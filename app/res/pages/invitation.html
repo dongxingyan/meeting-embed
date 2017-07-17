@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>做客邀请</title>
+    <link rel="stylesheet" href="./invitation.css">
+    <script>
+!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+    </script>
+</head>
+
+<body>
+    <div id="top-hid" style="display:none; background-color: #777777;height:2.8rem;width: 10rem;">
+        <img src="./msg.png" style="width: 8rem;float: right;margin-right: .5rem;margin-top: 0.1rem">
+    </div>
+    <div class="wrapper">
+        <!-- 
+        <div class="page-title">
+            <span>会议邀请</span>
+        </div>
+        -->
+        <div class="disc">
+            <p class="disc-user" style="display: none" id="meetingName"></p>
+             <!--<p class="disc-tips hide-when-cancel">（会议信息已更新）</p>-->
+            <!--<p class="disc-tips show-when-cancel">（会议已取消）</p>-->
+        </div>
+        <ul class="info-list">
+            <li class="info-list-item">房间号：<span id="meetingRoomNum"></span></li>
+            <li class="info-list-item hide-when-cancel">访客密码：<span id="guestPassword"></span></li>
+            <li class="info-list-item">主题：<span id="theme"></span></li>
+            <li class="info-list-item">时间：<span id="meetingTime"></span></li>
+        </ul>
+        <div class="enter-meeting hide-when-cancel">
+            <p class="tag">大麦家视宝做客</p>
+            <a id="goMeeting" href="javascript:;">
+                <div class="enter-meeting-btn" id="enter-meeting-btn">立即前往</div>
+            </a>
+        </div>
+        <div class="show-font-box hide-when-cancel">
+            <p style="max-width:10rem;word-break:break-all;">其他做客方式：</p>
+            <p style="max-width:10rem;word-break:break-all;">1、桌面客户端：</p>
+            <p style="max-width:10rem;word-break:break-all;">桌面客户端支持Win7以上Windows系统和Mac系统；</p>
+            <p style="max-width:10rem;word-break:break-all;">下载地址：https://www.cloudp.cc/pcloudWeb/download.html</p>
+            <p style="max-width:10rem;word-break:break-all;">2、手机客户端：</p>
+            <p style="max-width:10rem;word-break:break-all;">在手机移动端打开鹏云视频会议应用，若没有可以在安卓手机应用市场或iOS AppStore中搜索下载“鹏云视频会议”；</p>
+            <p style="max-width:10rem;word-break:break-all;">3、浏览器：</p>
+            <p style="max-width:10rem;word-break:break-all;">访问地址：https://meeting.cloudp.cc</p>
+            <p style="max-width:10rem;word-break:break-all;">注：如要在浏览器内使用桌面共享功能，需使用定制版傲游浏览器或谷歌浏览器+插件的方式，下载地址：https://www.cloudp.cc/pcloudWeb/download.html</p>
+        </div>
+    </div>
+    <script src="./invitation.js"></script>
+</body>
+
+</html>

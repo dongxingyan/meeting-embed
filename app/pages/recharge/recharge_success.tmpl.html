@@ -1,0 +1,33 @@
+<div class="recharge-success">
+    <nut-page title="支付成功">
+		<div class="deal">
+			<div class="deal-msg">
+				<div class="success-msg-icon"></div>
+				<p class="deal-msg-tips">充值成功</p>
+				<p class="deal-msg-inst">您已成功充值<span>{{time}}</span>分钟</p>		
+			</div>
+			<ul class="deal-details" style="overflow: hidden;">
+				<li>
+					<div class="fl">房间号</div>
+					<div class="fr">{{meetingRoomNum}}</div>
+				</li>
+				<li>
+					<div class="fl">充值时长</div>
+					<div class="fr"><span>{{time}}&nbsp;</span>分钟</div>
+				</li>
+				<li>
+					<div class="fl">剩余时长</div>
+					<div class="fr"><span>{{remain}}&nbsp;</span>分钟</div>
+				</li>
+				<li>
+					<div class="fl">支付金额</div>
+					<div class="fr"><span>{{money|currency:'¥&nbsp;'}}</span></div>
+				</li>
+			</ul>
+			<div class="deal-btn success-deal-btn">
+				<a ng-click="handleContinueBtnClick()">继续充值</a>
+				<a ng-click="handleOkBtnClick()">确定</a>
+			</div>	
+		</div>
+    </nut-page>
+</div>

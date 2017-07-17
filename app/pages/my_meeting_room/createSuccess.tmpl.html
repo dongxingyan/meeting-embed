@@ -1,0 +1,25 @@
+<div class="my-meeting-room-createSuccess">
+    <nut-page title="我的房间" hide-title="true">
+        <div class="success-head">
+            恭喜您获得<i>{{data.remainTime}}</i>分钟时长
+        </div>
+        <div class="success-detail">
+            <div class="success-title">
+                您的房间将在3分钟内完成激活
+            </div>
+            <div class="success-number">
+                您的房间号为<br><i class="number">{{data.num}}</i>
+            </div>
+            <div class="success-btn" ng-click="handleOKButtonClicked()">确定</div>
+        </div>
+        <div class="success-help"><a ng-click="gotoHelpPage()" ui-sref="meetingRoomSetupHelp">使用帮助</a></div>
+
+            <!--<div class="success-icon"></div>-->
+            <!--<div class="success-title">激活成功!<br>您的会客厅将在3分钟内完成激活。</div>-->
+            <!--<div class="success-line-1">您的会客厅号为</div>-->
+            <!--<div class="success-line-2">{{data.num}}</div>-->
+            <!--<div class="success-line-3">恭喜您免费获得 {{data.remainTime}} 分钟时长，<br>有效期一个月。</div>-->
+            <!--<div class="success-btn" ng-click="handleOKButtonClicked()">确定</div>-->
+            <!--<div class="success-help"><a ng-click="gotoHelpPage()" ui-sref="meetingRoomSetupHelp">使用帮助</a></div>-->
+    </nut-page>
+</div>

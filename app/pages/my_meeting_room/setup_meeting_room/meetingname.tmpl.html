@@ -1,0 +1,14 @@
+<div class="meetingroom-setup-meetingname">
+    <nut-page title="会客昵称" icon="icon-save" ext-callback='save()'>
+    	<div class="meetingroom-setup-item">
+	    	<div class="meetingroom-setup-item-box">
+	    		<input  ng-model="myMeetingRoom.nickName" type="text" placeholder="请输入昵称">
+    			<i  ng-click="myMeetingRoom.nickName=''" onclick="document.querySelector('input').focus()" class="cross"></i>
+	    	</div>    		
+    	</div>      
+				
+		<div class="settings btn-save" ng-click="save()">
+			保存
+		</div>
+    </nut-page>
+</div>

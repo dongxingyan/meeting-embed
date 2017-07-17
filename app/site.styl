@@ -1,0 +1,177 @@
+@charset "UTF-8"
+
+_(v)
+  v / 64rem
+
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p,i {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-style: normal;
+  tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color:  rgba(0,0,0,0);
+}
+
+a,button{  
+  tap-highlight-color:  rgba(0,0,0,0);
+  -webkit-tap-highlight-color:  rgba(0,0,0,0);
+}
+
+body {
+  font-family: "PingFang","微软雅黑","Helvetica","Arail","黑体";
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  color: #5c5c5c; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: none; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: none;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+textarea {
+  resize: none; }
+
+input, button, textarea, select {
+  *font-size: 100%; 
+  font-size: _(30)
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none; }
+
+legend {
+  color: #000; }
+
+del, ins {
+  text-decoration: none; }
+
+small {
+  font-size: 100%;
+  }
+
+a {
+  text-decoration: none;
+  color: #5c5c5c;
+  outline: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  outline: none;
+  -moz-outline: none; }
+
+
+*input[type=radio], input[type=checkbox], x:-moz-any-link, x:default {
+  vertical-align: -3px; }
+
+/*html5*/
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+audio, canvas, video {
+  display inline-block
+}
+
+headerFontSize = 32px
+
+.my-meeting-room-create
+  .header
+    width _(640)
+    height _(80)
+    background-color white
+    border-bottom 1px solid black
+
+    .leftbtn
+        width _(135)
+        height _(80)
+        float left
+        color blue
+        padding-left _(15)
+        font-size headerFontSize
+        line-height _(80)
+
+    h2
+        width _(340)
+        float left
+        padding 0
+        margin 0
+        line-height _(80)
+        color blue
+        text-align center
+        font-size headerFontSize
+        font-weight 100
+
+    .rightbtn
+        width _(135)
+        height _(80)
+        text-align right
+        float left
+        color blue
+        padding-right _(15)
+        font-size headerFontSize
+        line-height _(80)
+
+        
+select {
+  border 0
+  color #93620a
+  background-color rgba(255,255,255,0)
+}
+
+.remain-time-low{ 
+  color:#fc474a
+}
+.remain-time-normal{ 
+  color:#11b7c9
+}
+.remain-time-high{
+  color:#00be82
+}
+
+input{
+  font-size _(30)
+}

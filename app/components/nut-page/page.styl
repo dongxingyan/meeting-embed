@@ -1,0 +1,131 @@
+_(value)
+  value / 64rem
+
+#view-container {
+//height: 100%
+}
+
+[ui-view] {
+  transform rotate3d(0,0,0,0deg)
+  -webkit-transform rotate3d(0,0,0,0deg)
+  width: _(640)
+  position absolute
+  min-height 100%
+  transition: .3s ease-in-out all;
+  -webkit-transition: .3s ease-in-out all;
+  background-color rgb(245, 247, 249)
+
+}
+
+.in [ui-view].ng-enter {
+  position absolute
+  z-index 10000
+  left: 100%;
+}
+
+.in [ui-view].ng-enter.ng-enter-active {
+  left: 0;
+  z-index 10000
+  position absolute
+}
+
+.in [ui-view].ng-leave {
+  position absolute
+  z-index 0
+  left: 0;
+}
+
+.in [ui-view].ng-leave.ng-leave-active {
+  left: 0;
+  z-index 0
+  opacity 0
+  position absolute
+}
+
+.out [ui-view].ng-enter {
+  position absolute
+  z-index 0
+  left: 0;
+}
+
+.out [ui-view].ng-enter.ng-enter-active {
+  position absolute
+  z-index 0
+  left: 0;
+}
+
+.out [ui-view].ng-leave {
+  position absolute
+  z-index 10000
+  left: 0;
+}
+
+.out [ui-view].ng-leave.ng-leave-active {
+  position absolute
+  z-index 10000
+  left: 100%;
+}
+
+
+.nuts-page {
+  background-color rgb(245, 247, 249)
+  .nuts-page-header {
+    background-color rgb(35, 209, 227)
+    color rgb(255, 255, 255)
+    height: _(78);
+    border-bottom: _(1) solid silver;
+    clear both
+    .title {
+      text-align center
+      font-weight 500
+      line-height _(78)
+      font-size _(29)
+      float left
+      width _(510)
+      font-family: arial
+      color:#93620a;
+    }
+    .left {
+      margin-left _(10)
+      float left
+    }
+    .right {
+      margin-right _(10)
+      float right
+    }
+  }
+}
+
+.nuts-icon {
+  padding-top _(14)
+  padding-bottom _(14)
+  width _(50)
+  height _(50)
+  float left
+  display inline-block
+  color:#93620a
+}
+
+.nuts-icon.icon-back
+  background: url("./res/back1.png") center no-repeat
+  background-size _(16) _(28)
+
+.nuts-icon.icon-more
+  background: url("./res/more.png") center no-repeat
+  background-size _(38) _(10)
+
+.nuts-icon.icon-setting
+  background: url("./res/setting-icon.png") center no-repeat
+  background-size _(29) _(26)
+
+.nuts-icon.icon-save
+  background: url("./res/save.png") center no-repeat
+  background-size _(50) _(24)
+
+
+
+
+
+
+
+

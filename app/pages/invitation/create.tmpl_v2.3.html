@@ -1,0 +1,70 @@
+<!--发起会议邀请页面-->
+<div class="invitation-index">
+
+	<nut-page title="发起房间邀请">
+		<ul class="invitation-details">
+			<li ui-sref="invitationSetupTheme" class="invitation-details-subject">
+				<div class="fl">主题（选填）</div>
+				<div class="fr">
+					<!--<span>请输入会议主题</span>&ensp;&ensp;-->
+					<span>{{theme()}}</span>&nbsp;&nbsp;
+					<i class="skip-right-icon"></i>
+				</div>
+			</li>
+			<li>
+				<div class="fl">开始时间</div>
+				<div class="fr datetime-input-group">
+					<div class="date-input">
+						<input class="datetime-input-above" ng-change="showChange()" type="date" ng-model="timeValues.startTime" id="invitation-create-datepicker">
+						<div class="datetime-input-below">{{getStartDate()}}</div>
+					</div>
+					<div class="time-input">
+						<input class="datetime-input-above" ng-change="showChange()" type="time" ng-model="timeValues.startTime" id="invitation-create-timepicker">
+						<div class="datetime-input-below">{{getStartTime()}}</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="fl">持续时间</div>
+				<div class="fr">
+					<!--<div class="time-input">
+						<input class="datetime-input-above" ng-change="showChange()" type="time" ng-model="timeValues.duration" id="invitation-create-timepicker">
+						<div class="datetime-input-below">{{getDuration()}}</div>
+					</div>-->
+					<select class="time select" ng-model="timeValues.durationValue" ng-change="showChange()">
+						<option value="30">30分钟</option>
+						<option value="60">60分钟</option>
+						<option value="90">90分钟</option>
+						<option value="120">120分钟</option>
+						<option value="150">150分钟</option>
+						<option value="180">180分钟</option>
+						<option value="240">4小时</option>
+						<option value="300">5小时</option>
+						<option value="360">6小时</option>
+						<option value="420">7小时</option>
+						<option value="480">8小时</option>						
+					</select>
+				</div>
+			</li>
+		</ul>
+
+		
+		<div class="invitation-create" ng-click="invite()">
+			<span ng-show="!waiting">创建</span>
+			<span ng-show="waiting">创建中，请稍候</span>
+		</div>
+		<div class="shade" ng-show="waiting">
+
+		</div>
+
+		<!--<div class="invitation-type">
+			<p class="invitation-type-title">请选择邀请方式</p>
+			<ul class="invitation-type-item">
+				<li class="fl" ng-repeat='invitationType in invitationTypes' ng-click="invite(invitationType.type)">
+					<img ng-src="{{invitationType.url}}" alt="" class="invitation-type-item-Img">
+					<p>{{invitationType.name}}</p>
+				</li>
+			</ul>
+		</div>-->
+	</nut-page>
+</div>

@@ -1,0 +1,36 @@
+<div class="my-meeting-room-meetingDetails">
+    <nut-page title="使用明细">
+		<div class="meetingRoom-Details">
+			<ul class="meetingRoom-Details-item">
+				<li>
+					<div class="fl">房间号：</div>
+					<div class="fl">{{data.meetingRoomNum}}</div>
+				</li>
+				<li>
+					<div class="fl">会客时间：</div>
+					<div class="fl">{{data.time}}</div>
+				</li>
+				<li>
+					<div class="fl">消耗时长：</div>
+					<div class="fl"><span>{{data.duration}}</span>分钟</div>
+				</li>
+			</ul>
+			<ul class="meetingRoom-Details-item">
+				<li>
+					<div class="fl">成员：<span>{{data.amount}}</span>人</div>
+					<div class="fr"><span>{{totalDuration}}</span>分钟</div>	
+				</li>
+				<li ng-repeat="item in data.list">
+					<div class="fl"><span>{{item.nickName}}</span></div>
+					<div class="fr"><span>{{item.duration}}</span>分钟</div>
+				</li>
+				<!--<li>-->
+					<!--<div class="fl">用户<span>Ａ</span>人</div>-->
+					<!--<div class="fr"><span>69</span>分钟</div>	-->
+				<!--</li>-->
+			</ul>
+			
+		</div>
+		
+    </nut-page>
+</div>

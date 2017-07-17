@@ -1,0 +1,86 @@
+<!--取消会议邀请-->
+<div class="invitation-edit">
+    <nut-page title="会客邀请" icon="icon-more" ext-callback='log()'>
+        <ul class="invitation-details">
+            <li ui-sref="invitationSetupTheme_save({invitationId:vm.invitationId})" ng-click="handleSetupTheme()" class="invitation-details-subject">
+                <div class="fl">主题（选填）</div>
+                <div class="fr">
+                    <span>{{invitation.theme}}</span>&nbsp;&nbsp;
+                    <i class="skip-right-icon"></i>
+                </div>
+            </li>
+            <li>
+                <div class="fl">开始时间</div>
+                <!--<div class="fr">{{invitation.startTime| date:'yyyy-mm-dd HH:mm'}}</div>-->
+                <div class="fr datetime-input-group">
+                    <div>
+                        <div class="date-input">
+                            <input class="datetime-input-above" ng-change="startTimeChange()" type="date" ng-model="invitation.startTime" id="invitation-create-datepicker">
+                            <div class="datetime-input-below">{{getStartDate()}}</div>
+                        </div>
+                        <div class="time-input">
+                            <input class="datetime-input-above" ng-change="startTimeChange()" type="time" ng-model="invitation.startTime" id="invitation-create-timepicker">
+                            <div class="datetime-input-below">{{getStartTime()}}</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="fl">持续时间</div>
+                <!--<div class="fr">{{invitation.duration}}</div>-->
+                <div class="fr">
+                    <!--<div class="time-input">
+                        <input class="datetime-input-above" ng-change="durationChange()" type="time" ng-model="invitation.duration" id="invitation-create-timepicker">
+                        <div class="datetime-input-below">{{getDuration()}}</div>
+                    </div>-->
+                    <select class="time select" ng-model="invitation.durationValue" ng-change="durationChange()">
+                        <option value="30">30分钟</option>
+                        <option value="60">60分钟</option>
+                        <option value="90">90分钟</option>
+                        <option value="120">120分钟</option>
+                        <option value="150">150分钟</option>
+                        <option value="180">180分钟</option>
+                        <option value="240">4小时</option>
+                        <option value="300">5小时</option>
+                        <option value="360">6小时</option>
+                        <option value="420">7小时</option>
+                        <option value="480">8小时</option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+
+        <div class="guest-list" ng-show="guestList.length>0">
+            <header>参会人员</header>
+            <ul>
+                <li ng-repeat="item in guestList">
+                    <img ng-src="{{item.avatar}}" alt="{{item.nickname}}">
+                    <span ng-bind="item.nickname"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="invitation-type">
+            <p class="invitation-type-title edit-page-fix">请选择邀请方式</p>
+            <ul class="invitation-type-item">
+                <li class="fl" ng-click="handleShareBtnCLick(invitationType.type)" ng-repeat='invitationType in invitationTypes'>
+                    <img ng-src="{{invitationType.url}}" alt="" class="invitation-type-item-Img">
+                    <p>{{invitationType.name}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="invitation-cancel" ng-click="cancelInvitation()">
+            取消会客邀请
+        </div>
+    </nut-page>
+    <nut-alert show="showCancelAlert" modal-id="invitation-edit-cancel">
+        <div class="cm-alert-failure">
+            <div class="failure-tips">确定要取消会客邀请吗？</div>
+            <div class="btn">
+                <div class="cancel-btn fl" ng-click="alertCancel()">否</div>
+                <div class="success-btn fl" ng-click="alertOk()">是</div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </nut-alert>
+</div>
